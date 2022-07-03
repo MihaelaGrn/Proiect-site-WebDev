@@ -1,0 +1,395 @@
+/* stilizare sectiuni */
+
+/* sectiunea 1 */
+main .hero-title {
+    height: 40.2rem;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10rem;
+}
+
+.image-content {
+    position: absolute;
+    background-image: url("https://www.itschool.ro/_next/static/media/background-big.6f4ab9bf.svg");
+    background-color: var(--bg-dark);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 55rem;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+.image-content .image-layout {
+    height: 55rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-m);
+    padding-right: var(--spacing-m);
+    max-width: min(1240px, 100vw - 20px);
+}
+
+.image-content .image-layout img {
+    height: 70%;
+}
+
+.hero-title .hero-message {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-message h1 {
+    margin-top: 1.5rem;
+    margin-bottom: var(--spacing-l);
+}
+
+.hero-message p {
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.hero-message .sponsori {
+    gap: 2rem;
+    display: flex;
+    margin-bottom: var(--spacing-l);
+}
+
+.sponsori img {
+    height: 36px;
+    width: auto;
+}
+
+.button-group {
+    display: flex;
+    gap: var(--spacing-normal);
+
+}
+
+.button-group a {
+    font-size: var(--font-size-m);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    transition: all ease-in-out 0.5s;
+}
+
+.button-group a:hover {
+    opacity: 0.8;
+}
+
+/* sectiunea 2 */
+.second-section {
+    /* background-color: #eeee; */
+    padding: 96px 50px;
+    position: absolute;
+}
+
+.second-section:before {
+    box-sizing: border-box;
+    position: relative;
+    background-image: url("");
+
+    inset: 0px 0px 0px calc(-50vw + min(600px, 50vw - 3rem));
+    width: 100vw;
+    position: absolute;
+    z-index: -2;
+
+}
+
+.second-section .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.second-section .title h2 {
+    text-align: center;
+}
+
+.second-section .actions button {
+    margin-left: 4rem;
+    margin-top: 5rem;
+}
+
+.second section .sponsor-title {
+    font-family: Asap, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.22;
+    text-align: center;
+    color: rgba(25, 30, 48, 0.4);
+    margin: 0px;
+}
+
+.second-section .sponsori {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.second-section .sponsori .sponsor {
+    flex-basis: 160px;
+    margin-bottom: 40px;
+}
+
+.second-section .sponsori .sponsor img {
+    margin: 0 40px;
+}
+
+/* Carusel */
+
+.slider {
+    width: min(100vw, 1200px);
+    text-align: center;
+    overflow: hidden;
+    margin-top: 3rem;
+}
+
+.slides {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+
+
+    /*
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+    */
+}
+
+.slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.slides>div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    max-width: 28rem;
+    height: 37rem;
+    margin-right: 50px;
+    border-radius: 10px;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    background-color: white;
+    padding: 1rem 0;
+}
+
+.slider>a {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 0.75rem;
+    background: var(--bg-primary);
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.125rem;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+}
+
+.slider>a:active {
+    top: 1px;
+}
+
+.slider>a:focus {
+    background: #000;
+}
+
+/* Stilizare card */
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 28rem;
+    height: 37rem;
+    border-radius: 1.6rem;
+    background-color: var(--text-color-light);
+    padding: 2.4rem 0px;
+    overflow-wrap: break-word;
+    text-align: left;
+    position: relative;
+    box-shadow: rgb(25 30 48 / 10%) 0px 2rem 4rem 0px;
+}
+
+.card-graphic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.grid-spacer {
+    padding: 0px 24px;
+    width: 100%;
+}
+
+.live {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 2.4rem;
+    right: 3.6rem;
+    border-radius: 4px;
+    padding: 2px 8px;
+    color: rgb(0, 197, 105);
+    background-color: rgba(0, 197, 105, 0.1);
+}
+
+.course-name {
+    font-weight: 500;
+    padding: 0px 24px;
+    font-size: 2.8rem;
+    line-height: 1.25;
+}
+
+.certificare {
+    padding: 0px 24px;
+    font-weight: normal;
+    line-height: 1.33;
+    overflow-wrap: break-word;
+}
+
+.course-start {
+    padding: 0px 24px;
+    font-weight: 500;
+    line-height: 1.22;
+    text-align: left;
+}
+
+.access {
+    align-self: flex-end;
+    padding: 0px 2.4rem;
+}
+
+.mt {
+    margin-top: auto;
+}
+
+.material-icons {
+    margin-top: 3.1rem;
+    cursor: pointer;
+    color: var(--text-color-dark);
+    transition: color 0.2s ease-in 0s;
+    align-self: flex-end;
+}
+
+.material-icons:hover {
+    color: var(--bg-primary);
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* stilizare carduri 25 mai */
+
+.card-set {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+/* third section */
+
+.third-section {
+    display: grid;
+    gap: 9px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "subtitle subtitle . ."
+        "title title . ."
+        "description description poster poster"
+        "programming programming poster poster"
+        "web web poster poster"
+        "graphics graphics devops devops"
+        "skillup skillup test others";
+    padding: 9.6rem 0px 0px;
+}
+
+.third-section .subtitle {
+    grid-area: subtitle / subtitle / subtitle / subtitle;
+    padding-bottom: 2.4rem;
+    color: var(--text-color-muted);
+}
+
+.third-section .title {
+    grid-area: title / title / title / title;
+    padding-bottom: 2.4rem;
+}
+
+.third-section .description {
+    grid-area: description / description / description / description;
+    padding-bottom: 4.8rem;
+}
+
+.third-section .poster img {
+    width: 100%;
+    margin-left: auto;
+    max-width: 500px;
+    display: block;
+}
+
+.third-section .programming {
+    grid-area: description / description / description / description;
+    padding-bottom: 4.8rem;
+}
+
+.third-section .programming .programe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.third-section .programming .programe .card-program {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 64px;
+    width: 64px;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: rgb(25 30 48 / 5%) 0px 10px 10px 0px;
+    background-color: white;
+}
+
+@media (max-width: 960px) {
+    .hero-title {
+        margin-top: 24px;
+    }
+
+
+}
