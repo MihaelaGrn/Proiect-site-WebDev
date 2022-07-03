@@ -1,0 +1,277 @@
+:root {
+    --bg-primary: rgb(0, 135, 104);
+    --bg-secondary: rgb(236, 177, 58);
+    --bg-tertiary: rgb(19, 123, 188);
+    --bg-dark: rgb(25, 30, 48);
+    --bg-muted: rgba(202, 205, 193, 0.1);
+
+    --text-color-white: rgb(255, 255, 255);
+    --text-color-light: rgb(253, 253, 253);
+    --text-color-dark: rgb(25, 30, 48);
+    --text-color-muted: rgba(25, 30, 48, 0.4);
+
+    --spacing-xl: 6rem;
+    --spacing-l: 3rem;
+    --spacing-m: 1.25rem;
+    --spacing-normal: 1rem;
+    --spacing-sm: 0.5rem;
+
+    --font-size-default: 1rem;
+    --font-size-m: 1.125rem;
+    --font-size-l: 1.75rem;
+    --font-size-xl: 2.25rem;
+    --font-size-xxl: 3rem;
+    --font-size-ml: 1.25rem;
+}
+
+/* Reseteaza CSS din browser */
+
+body {
+    margin: 0;
+    font-family: 'Asap', sans-serif;
+    font-size: var(--font-size-default);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--text-color-white);
+    text-decoration: none;
+}
+
+h1 {
+    font-size: var(--font-size-xxl);
+    color: var(--text-color-white);
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+    color: var(--text-color-dark);
+    margin: 0;
+}
+
+h3 {
+    font-size: var(--font-size-l);
+    color: var(--text-color-dark);
+}
+
+h4 {
+    font-size: var(--font-size-ml);
+    color: var(--text-color-dark);
+}
+
+h5 {
+    font-size: var(--font-size-m);
+    color: var(--text-color-dark);
+}
+
+p {
+    font-size: var(--font-size-ml);
+    color: var(--text-color-dark);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-size: var(--font-size-default);
+}
+
+:-webkit-any(article, aside, nav, section) h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+/* Navigare */
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-dark);
+    z-index: 20;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    margin-right: var(--spacing-m);
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+nav a {
+    padding: var(--spacing-normal);
+}
+
+nav ul li a:hover {
+    color: var(--bg-secondary);
+}
+
+.active {
+    font-weight: 500;
+    border-radius: 2rem;
+    background-color: rgba(252, 250, 247, 0.1);
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+}
+
+nav .meniu-despre {
+    position: relative;
+}
+
+nav .meniu-despre:hover .sub-meniu {
+    display: flex;
+}
+
+.sub-meniu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--bg-dark);
+    top: calc(100% - 10px);
+    z-index: 1;
+}
+
+.layout {
+    display: grid;
+    grid-template-rows: 76px 1fr auto;
+    grid-template-areas: "header""main""footer";
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+/* Layout main continut pagina */
+
+main {
+    grid-area: main / main / main / main;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: min(1240px, 100vw);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-m);
+    padding-right: var(--spacing-m);
+
+}
+
+section {
+    box-sizing: border-box;
+}
+
+/* stilizare buton succes */
+.button-success {
+    box-sizing: border-box;
+    width: fit-content;
+    padding: 0.65rem 4.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--bg-primary);
+    cursor: pointer;
+    border-radius: 2.4rem;
+    font-size: var(--font-size-m);
+    color: white;
+    transition: all ease-in-out 0.5s;
+}
+
+.button-success:hover {
+    opacity: 0.8;
+}
+
+/* stilizare titlu sectiuni */
+
+.title {
+    box-sizing: border-box;
+}
+
+.title :nth-child(1) {
+    color: var(--text-color-muted);
+
+}
+
+.title :nth-child(2) {
+    margin: 1rem 0;
+}
+
+/* stilizare card curs */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 28rem;
+    height: 27rem;
+    border-radius: 1.6rem;
+    box-shadow: rgb(25 30 48 / 10%) 0px 2rem 4rem 0px;
+    background-color: var(--text-color-light);
+    padding: 2.4rem 0px;
+    position: relative;
+
+}
+
+.card .card-header {
+    width: 100%;
+    align-self: flex-end;
+    display: flex;
+}
+
+.card .card-status {
+    position: absolute;
+    top: 2.4rem;
+    right: 3.6rem;
+    border-radius: 4px;
+    padding: 2px 8px;
+    color: var(--bg-primary);
+    background-color: rgba(0, 197, 105, 0.1);
+}
+
+.card .card-title {
+    padding: 0 12px;
+}
+
+.card .card-description {
+    padding: 0 12px;
+}
+
+.card .time-stamp {
+    padding: 0 12px;
+    font-weight: 500;
+}
+
+.card .card-action {
+    margin-top: 1.95rem;
+    align-self: flex-end;
+    color: var(--text-color-dark);
+    cursor: pointer;
+    transition: color 0.2s ease-in 0s;
+    align-self: flex-end;
+    display: flex;
+}
+
+.card .card-action:hover {
+    columns: var(--bg-primary);
+}
